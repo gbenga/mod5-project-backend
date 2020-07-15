@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_15_155043) do
+ActiveRecord::Schema.define(version: 2020_07_15_172750) do
 
   create_table "medicines", force: :cascade do |t|
     t.string "name"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2020_07_15_155043) do
   create_table "pharmas", force: :cascade do |t|
     t.string "name"
     t.string "address"
-    t.string "email"
+    t.string "website"
     t.integer "phone"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

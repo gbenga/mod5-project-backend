@@ -1,5 +1,5 @@
 class Medicine < ApplicationRecord
     belongs_to :pharma
-    has_many :orders
-    has_many :users, through: :orders
+    has_one :order
+    has_one :user, through: :order
 end
