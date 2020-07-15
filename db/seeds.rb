@@ -14,7 +14,7 @@ Order.destroy_all
 u1 = User.create(first_name: "Gbenga", last_name: "Ojo-Aromokudu", sex: "Male", date_of_birth: 868985448000, phone: 12345678900, address: "St.Pancras Renaissance Hotel,Euston Rd, Kings Cross, London NW1 2AR", allergies: "Pollen", medication: "Some conflicting medication")
 u2 = User.create(first_name: "Test User", last_name: "Test Last Name", sex: "Female", date_of_birth: 824945468050, phone: 98765432100, address: "The British Library, 96 Euston Rd, London NW1 2DB", allergies: "Shellfish", medication: "Some other conflicting medication")
 
-p1 = Pharma.create(name: "Clockwok Pharmacy", address: "150 Southampton Row, Holborn, London WC1B 5AN", website: "http://www.clockworkpharmacy.com/", phone: 442078377143)
+p1 = Pharma.create(name: "Clockwork Pharmacy", address: "150 Southampton Row, Holborn, London WC1B 5AN", website: "http://www.clockworkpharmacy.com/", phone: 442078377143)
 p2 = Pharma.create(name: "Evergreen Pharmacy", address: "64 Eversholt St, London NW1 1DA", website: "https://www.nhs.uk/Services/pharmacies/Overview/DefaultView.aspx?id=3755", phone: 442073875826)
 p3 = Pharma.create(name: "John Walker Chemist", address: "Leigh St, Saint Pancras, London WC1H 9QX", website: "http://johnwalkerchemist.co.uk/", phone: 442073871789)
 p4 = Pharma.create(name: "Green Light Pharmacy", address: "62-64 Hampstead Rd, London NW1 2NT", website: "http://www.greenlightpharmacy.co.uk/", phone: 442073873233)
