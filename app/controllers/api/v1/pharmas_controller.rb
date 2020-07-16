@@ -1,4 +1,4 @@
-class PharmasController < ApplicationController
+class Api::V1::PharmasController < ApplicationController
     def index
         pharmas = Pharma.all 
         render json: pharmas, include: [:medicines]

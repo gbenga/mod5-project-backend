@@ -1,9 +1,8 @@
-class MedicinesController < ApplicationController
+class Api::V1::MedicinesController < ApplicationController
     def index
         medicines = Medicine.all
         render json: medicines, include: [:pharma]
     end
-
 
     def show
         medicine = Medicine.find_by(id: params[:id])
