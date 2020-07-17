@@ -4,13 +4,10 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :first_name
       t.string :last_name
       t.string :sex
-      t.integer :date_of_birth
-      t.integer :phone
+      t.string :dob
+      t.string :phone
       t.string :address
       t.string :allergies
-      t.string :medication
-
-      t.timestamps
     end
   end
 end

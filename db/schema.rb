@@ -10,47 +10,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_15_172750) do
+ActiveRecord::Schema.define(version: 2020_07_17_174548) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "medicines", force: :cascade do |t|
     t.string "name"
-    t.float "price"
-    t.integer "pharma_id"
     t.string "instructions"
-    t.integer "quantity"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "order_medicines", force: :cascade do |t|
+    t.integer "order_id"
+    t.integer "medicine_id"
   end
 
   create_table "orders", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "medicine_id"
-    t.integer "delivery_date"
+    t.string "delivery_date"
     t.boolean "no_contact"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "pharmas", force: :cascade do |t|
     t.string "name"
     t.string "address"
     t.string "website"
-    t.integer "phone"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.string "phone"
+  end
+
+  create_table "stocks", force: :cascade do |t|
+    t.integer "pharma_id"
+    t.integer "medicine_id"
+    t.float "price"
+    t.integer "quantity"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
     t.string "sex"
-    t.integer "date_of_birth"
-    t.integer "phone"
+    t.string "dob"
+    t.string "phone"
     t.string "address"
     t.string "allergies"
-    t.string "medication"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

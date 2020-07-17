@@ -3,10 +3,8 @@ class CreatePharmas < ActiveRecord::Migration[6.0]
     create_table :pharmas do |t|
       t.string :name
       t.string :address
-      t.string :email
-      t.integer :phone
-
-      t.timestamps
+      t.string :website
+      t.string :phone
     end
   end
 end
