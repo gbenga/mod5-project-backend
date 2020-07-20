@@ -7,6 +7,8 @@ Rails.application.routes.draw do
       resources :medicines, only: [:index, :show]
       resources :pharmas, only: [:index, :show]
       resources :stocks, only: [:show]
+
+      post "/sign-in", to: "users#sign_in"
       get "/validate", to: "users#validate"
     end
   end
