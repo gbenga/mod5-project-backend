@@ -15,7 +15,7 @@ class Api::V1::UsersController < ApplicationController
 
     #Auth
     def sign_in 
-        # Try and find a user with the username we've beem given
+        # Try and find a user with the username we've been given
         user = User.find_by(username: params[:username])
         #If we can find them, try and authenticate that user with the password we've been given
         if user && user.authenticate(params[:password])
