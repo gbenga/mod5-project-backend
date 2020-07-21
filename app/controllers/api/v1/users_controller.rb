@@ -13,6 +13,24 @@ class Api::V1::UsersController < ApplicationController
         end
     end
 
+    def new
+        user = User.new
+    end
+
+    def create
+        user = User.new(user_params)
+        user.password = params[:password]
+        if user.valid? 
+            user.save
+        
+            # if user
+                render json: user, include: [:orders, :medicines]
+            # else
+            #     render json: {message: "Could not create this user"}
+            # end
+        end
+    end
+
     def edit
         user = User.find_by(id: params[:id])
     end
@@ -58,6 +76,6 @@ class Api::V1::UsersController < ApplicationController
 
     private
     def user_params
-        params.require(:user).permit(:first_name, :last_name, :phone, :address, :allergies)
+        params.require(:user).permit(:first_name, :last_name, :phone, :address, :allergies, :sex, :dob, :username, :password)
     end
 end
