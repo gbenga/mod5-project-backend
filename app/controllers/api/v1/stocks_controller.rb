@@ -1,4 +1,9 @@
 class Api::V1::StocksController < ApplicationController
+    def index
+        stocks = Stock.all
+        render json: stocks, include: [:pharma, :medicine]
+    end
+    
     def show
         stock = Stock.find_by(id: params[:id])
         if stock
