@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       resources :order_medicines, only: [:index, :show, :new, :create]
       resources :medicines, only: [:index, :show]
       resources :pharmas, only: [:index, :show]
-      resources :stocks, only: [:index, :show]
+      resources :stocks, only: [:index, :show, :edit, :update]
 
       post "/sign-in", to: "users#sign_in"
       get "/validate", to: "users#validate"

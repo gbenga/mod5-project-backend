@@ -41,7 +41,7 @@ class Api::V1::UsersController < ApplicationController
         if user
             render json: user, include: [:orders, :medicines]
         else
-            render json: {message: "Could not create this user"}
+            render json: {message: "Could not update this user"}
         end
     end
 
