@@ -22,12 +22,9 @@ class Api::V1::UsersController < ApplicationController
         user.password = params[:password]
         if user.valid? 
             user.save
-        
-            # if user
-                render json: user, include: [:orders, :medicines]
-            # else
-            #     render json: {message: "Could not create this user"}
-            # end
+            render json: user, include: [:orders, :medicines]
+        else
+            render json: {errors: user.errors.full_messages}
         end
     end
 
@@ -38,10 +35,10 @@ class Api::V1::UsersController < ApplicationController
     def update
         user = User.find_by(id: params[:id])
         user.update(user_params)
-        if user
+        if user.valid?
             render json: user, include: [:orders, :medicines]
         else
-            render json: {message: "Could not update this user"}
+            render json: {errors: user.errors.full_messages}
         end
     end
 
@@ -76,6 +73,6 @@ class Api::V1::UsersController < ApplicationController
 
     private
     def user_params
-        params.require(:user).permit(:first_name, :last_name, :phone, :address, :allergies, :sex, :dob, :username, :password)
+        params.require(:user).permit(:first_name, :last_name, :phone, :address, :allergies, :sex, :dob, :username)
     end
 end
