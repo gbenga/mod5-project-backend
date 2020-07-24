@@ -34,6 +34,8 @@ class Api::V1::UsersController < ApplicationController
 
     def update
         user = User.find_by(id: params[:id])
+        user.password = params[:password]
+        # byebug
         user.update(user_params)
         if user.valid?
             render json: user, include: [:orders, :medicines]
