@@ -15,7 +15,8 @@ Medicine.destroy_all
 
 u1 = User.create(username: "gbenga", password: "gbenga", first_name: "Gbenga", last_name: "Ojo-Aromokudu", sex: "Male", dob: "1995-07-30", phone: "12345678901", address: "St.Pancras Renaissance Hotel,Euston Rd, Kings Cross, London NW1 2AR", allergies: "Pollen")
 u2 = User.create(username: "testing", password: "testing", first_name: "Test First Name", last_name: "Test Last Name", sex: "Female", dob: "1998-06-03", phone: "98765432100", address: "The British Library, 96 Euston Rd, London NW1 2DB", allergies: "Shellfish")
-u2 = User.create(username: "flatiron", password: "flatiron", first_name: "Flat", last_name: "Iron", sex: "Male", dob: "2018-06-03", phone: "12341234123", address: "Finsbury Pavement", allergies: "")
+u3 = User.create(username: "flatiron", password: "flatiron", first_name: "Flat", last_name: "Iron", sex: "Male", dob: "2018-06-03", phone: "12341234123", address: "Finsbury Pavement", allergies: "")
+u4 = User.create(username: "guest1", password: "guest1", first_name: "Gus", last_name: "Guest", sex: "Male", dob: "2018-06-03", phone: "12341234123", address: "Guest House", allergies: "")
 
 p1 = Pharma.create(name: "Clockwork Pharmacy", address: "150 Southampton Row, Holborn, London WC1B 5AN", website: "http://www.clockworkpharmacy.com/", phone: "+442078377143")
 p2 = Pharma.create(name: "Evergreen Pharmacy", address: "64 Eversholt St, London NW1 1DA", website: "https://www.nhs.uk/Services/pharmacies/Overview/DefaultView.aspx?id=3755", phone: "+442073875826")
