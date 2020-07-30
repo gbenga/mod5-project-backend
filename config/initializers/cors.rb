@@ -5,7 +5,7 @@
 
 # Read more: https://github.com/cyu/rack-cors
 
-frontend_origin = ENV['RAILS_ENV'] === "production" ? 'https://relaxed-leavitt-596441.netlify.app' : 'http://localhost:3001'
+frontend_origin = ENV['RAILS_ENV'] === "production" ? 'https://get-it-otc.netlify.app' : 'http://localhost:3001'
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
