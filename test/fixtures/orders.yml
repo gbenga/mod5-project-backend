@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  medicine_id: 1
+  delivery_date: 1
+  no_contact: false
+
+two:
+  user_id: 1
+  medicine_id: 1
+  delivery_date: 1
+  no_contact: false
