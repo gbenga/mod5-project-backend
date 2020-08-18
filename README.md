@@ -18,7 +18,7 @@ This project was created with:
 
 ## **Installation**
 
-To use Get It OTC locally, you will need Git and Ruby installed. You will need to clone this repo and launch the backend to start. Additionally, if you would like to view the database diagram, you will need a drawio extension. These are easy to find by searching "drawio" in the VS Code Extensions Marketplace
+To use Get It OTC locally, you will need Git and Ruby installed. You will need to clone this repo and launch the backend to start. Additionally, if you would like to view the database diagram, you will need a drawio extension. These are easy to find by searching "drawio" in the VS Code Extensions Marketplace.
 
 ```
 Clone this repository
@@ -37,7 +37,7 @@ Launch
 $ rails s
 ```
 
-After this, you should be able to view the backend at [localhost:3000](http://localhost:3000/api/v1), and then run the [frontend](https://github.com/gbenga/get-it-otc-frontend)
+After this, you should be able to view the backend at [localhost:3000](http://localhost:3000/api/v1), and then run the [frontend](https://github.com/gbenga/get-it-otc-frontend).
 
 ## **License**
 
